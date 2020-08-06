@@ -1,4 +1,5 @@
-const astrosUrl = 'https://cors-anywhere.herokuapp.com/https://www.howmanypeopleareinspacerightnow.com/peopleinspace.json'
+const astrosUrl = 'https://www.howmanypeopleareinspacerightnow.com/peopleinspace.json'
+const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/'
 const wikiUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
 const peopleList = document.getElementById('people');
 
@@ -81,7 +82,6 @@ function generateHTML(data) {
       <span>${person.location}</span>
       <h2>${person.name}</h2>
       <p>${person.title}</p>
-      <p>${person.country}</p>
       <p>Days in Space: ${calcDaysInSpace(person.launchdate)}</p>
     `;
 
@@ -96,11 +96,11 @@ function calcDaysInSpace(dateString) {
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-  // getPeopleInSpace(astrosUrl)
-  //   .then(generateHTML)
-  //   .catch( () => {
-  //     peopleList.innerHTML = '<h3>Something went wrong!</h3>'
-  //   })
+  getPeopleInSpace(corsProxyUrl + astrosUrl)
+    .then(generateHTML)
+    .catch( () => {
+      peopleList.innerHTML = '<h3>Something went wrong!</h3>'
+    })
 
-  generateHTML(mockData)
+  // generateHTML(mockData)
 });
