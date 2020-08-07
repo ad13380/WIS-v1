@@ -1,14 +1,19 @@
 class ProfileList {
-  constructor() {
-    this.profileArray = [];
+  constructor(profileClass = Profile) {
+    this.profileClass = profileClass;
+    this._profileArray = [];
     this.profileId = 0;
   }
 
-  populateList(profiles) {
-    profiles.forEach(profileJSON => {
-      const profile = new Profile(profileJSON, this.profileId);
-      this.profileArray.push(profile);
+  async populate(profileListJSON) {
+    profileListJSON.forEach(profileJSON => {
+      const profile = new this.profileClass(profileJSON, this.profileId);
+      this._profileArray.push(profile);
       this.profileId++;
     })
+  }
+
+  get profileArray() {
+    return this._profileArray;
   }
 }

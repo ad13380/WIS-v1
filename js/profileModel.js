@@ -5,7 +5,7 @@ class Profile {
   }
 
   get id() { 
-    return this.id;
+    return this._id;
   }
 
   get name() { 
@@ -16,12 +16,16 @@ class Profile {
     return this.profileJSON.title;    
   }
 
-  get flagImage() {
-    return this.profileJSON.countryflag;    
+  get description() {
+    return this.profileJSON.description;
   }
 
   get craft() {
     return this.profileJSON.location;    
+  }
+
+  get flagImage() {
+    return this.profileJSON.countryflag;    
   }
 
   get bioImage() {
@@ -35,6 +39,6 @@ class Profile {
   get daysInSpace() {
     const parts = this.profileJSON.launchdate.split('-');
     const launchDate = new Date(parseInt(parts[0]), parseInt(parts[1] - 1), parseInt(parts[2]));
-    return Math.floor((new Date() - launchDate) / (1000*60*60*24));
+    return Math.floor((new Date() - launchDate) / (1000 * 60 * 60 * 24));
   }
 }
