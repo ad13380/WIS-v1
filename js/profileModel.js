@@ -17,7 +17,7 @@ class Profile {
   }
 
   get description() {
-    return this.profileJSON.description;
+    return this.profileJSON.astroDescription;
   }
 
   get craft() {

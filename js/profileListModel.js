@@ -1,5 +1,5 @@
 class ProfileList {
-  constructor(profileClass = Profile) {
+  constructor(profileClass) {
     this.profileClass = profileClass;
     this._profileArray = [];
     this.profileId = 0;

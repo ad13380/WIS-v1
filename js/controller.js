@@ -1,19 +1,34 @@
 class Controller {
-  constructor(profileList = new ProfileList(), profileListViewClass = ProfileListView) {
+  constructor(profileClass = Profile, profileViewClass = ProfileView, profileListClass = ProfileList, profileListViewClass = ProfileListView) {
     this.astrosUrl = 'https://www.howmanypeopleareinspacerightnow.com/peopleinspace.json'
     this.corsProxyUrl = 'https://cors-anywhere.herokuapp.com/'
     this.wikiUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
-    this.profileList = profileList;
+    this.profileList = new profileListClass(profileClass);
+    this.profileViewClass  = profileViewClass;
     this.profileListViewClass = profileListViewClass;
   }
   
   async returnListHtml() {
-    await this._populateList();
+    await this._populateProfileList();
     const profileListView = new this.profileListViewClass(this.profileList);
     return profileListView.getHtml();
   }
 
-  async _populateList() {
+  returnProfileHtml(id) {
+    const profile = this._getProfileById(id)
+    const profileView = new this.profileViewClass(profile)
+    return profileView.getHtml();
+  }
+
+  get profileIds() {
+    return this.profileList.profileArray.map(profile => profile.id)
+  }
+
+  _getProfileById(id) {
+    return this.profileList.profileArray.filter(profile => profile.id === id)[0];
+  }
+
+  async _populateProfileList() {
     const profileListJSON = await this._getPeopleInSpace();
     this.profileList.populate(profileListJSON);
   }
