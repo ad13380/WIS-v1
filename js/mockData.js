@@ -45,36 +45,6 @@ const mockData =      {
       "bio" : "This is Ivan’s first trip to space! He is an engineer by trade that completed spaceflight training in 2012. ",
       "biolink" : "https://en.wikipedia.org/wiki/Ivan_Vagner",
       "twitter" : ""
-    },
-     {
-      "name" : "Ivan Vagner",
-      "biophoto" : "http://howmanypeopleareinspacerightnow.com/app/biophotos/ivan-vagner.jpg",
-      "biophotowidth" : 640,
-      "biophotoheight" : 800,
-      "country" : "russia",
-      "countryflag" : "http://howmanypeopleareinspacerightnow.com/app/flags/flag-russia.jpg",
-      "launchdate" : "2020-04-09",
-      "careerdays" : 0,
-      "title" : "Flight Engineer",
-      "location" : "International Space Station",
-      "bio" : "This is Ivan’s first trip to space! He is an engineer by trade that completed spaceflight training in 2012. ",
-      "biolink" : "https://en.wikipedia.org/wiki/Ivan_Vagner",
-      "twitter" : ""
-    },
-    {
-      "name" : "Ivan Vagner sdfgasdfgadfgasdgsadfgsdfgzsdfg",
-      "biophoto" : "http://howmanypeopleareinspacerightnow.com/app/biophotos/ivan-vagner.jpg",
-      "biophotowidth" : 640,
-      "biophotoheight" : 800,
-      "country" : "russia",
-      "countryflag" : "http://howmanypeopleareinspacerightnow.com/app/flags/flag-russia.jpg",
-      "launchdate" : "2020-04-09",
-      "careerdays" : 0,
-      "title" : "Flight Engineer",
-      "location" : "International Space Station",
-      "bio" : "This is Ivan’s first trip to space! He is an engineer by trade that completed spaceflight training in 2012. ",
-      "biolink" : "https://en.wikipedia.org/wiki/Ivan_Vagner",
-      "twitter" : ""
     }
   ]
 }
