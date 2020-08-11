@@ -6,25 +6,14 @@ class ProfileListView {
   getHtml() {
     return this.profileList.profileArray.reduce((acc, val) => {
       return acc += `
-      <div class="col-md-4">
-        <div class="card" style="border-radius: 15px;  overflow: hidden;">
-          <img class="card-img-top" src=${val.bioImage} alt="astronaut thumbnail">
-          <div class="card-body">
-            <p class="card-text">
-              <p class="h4">${val.name}</p>
-              <img src=${val.flagImage}>
-              <span>${val.title}</span>
-              <p>${val.craft}</p>
-              <p>Days in Space: ${val.daysInSpace}</p>
-            </p>
+      <div class="col-md-4 p-3">
+        <a href="#" class="card background-colour" data-toggle="modal" data-target="#modal-profile-id-${val.id}">
+          <img class="card-img-top mask1" src=${val.bioImage} alt="astronaut thumbnail">
+          <div class="card-body card-img-overlay d-flex">
+            <img class="mt-auto align-self-center" style="height: 30px; width: auto;" src=${val.flagImage}>
+            <span class="ml-2 my-1 h4 mt-auto flex-grow-1 text-overflow text-white">${val.name}</span>
           </div>
-
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-profile-id-${val.id}">
-            Temporary button
-          </button>
-
-
-        </div>
+        </a>
       </div>
       `;
     }, '');

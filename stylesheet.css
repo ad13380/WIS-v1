@@ -1,0 +1,25 @@
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  border-radius: 15px; 
+  border: none; 
+  overflow: hidden;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.background-colour {
+  background: #000011
+}
+
+.mask1 {
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 40%);
+  mask-image: linear-gradient(to top, transparent 0%, black 40%);
+}

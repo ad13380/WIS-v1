@@ -62,7 +62,7 @@ const mockData =      {
       "twitter" : ""
     },
     {
-      "name" : "Ivan Vagner",
+      "name" : "Ivan Vagner sdfgasdfgadfgasdgsadfgsdfgzsdfg",
       "biophoto" : "http://howmanypeopleareinspacerightnow.com/app/biophotos/ivan-vagner.jpg",
       "biophotowidth" : 640,
       "biophotoheight" : 800,
