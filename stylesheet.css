@@ -9,6 +9,12 @@ a, a:hover {
   overflow: hidden;
 }
 
+.modal-content {
+  border-radius: 15px; 
+  border: none; 
+  overflow: hidden;
+}
+
 .text-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
