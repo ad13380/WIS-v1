@@ -7,8 +7,3 @@ install:
 
 script:
   - npm test
-
-# deploy:
-#   provider: heroku
-#   skip-clearnup: true
-#   github-token: $GITHUB_TOKEN
