@@ -1,7 +1,6 @@
 class Controller {
   constructor(profileClass = Profile, profileViewClass = ProfileView, profileListClass = ProfileList, profileListViewClass = ProfileListView) {
-    this.astrosUrl = 'https://www.howmanypeopleareinspacerightnow.com/peopleinspace.json'
-    this.corsProxyUrl = 'https://cors-anywhere.herokuapp.com/'
+    this.corsProxyUrl = 'https://wis-proxy.herokuapp.com/'
     this.wikiUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
     this.profileList = new profileListClass(profileClass);
     this.profileViewClass  = profileViewClass;
@@ -34,7 +33,7 @@ class Controller {
   }
 
   async _getPeopleInSpace() {
-    const astroJSON = mockData // await _getJSON(this.astrosUrl);
+    const astroJSON = await this._getJSON(this.corsProxyUrl); // mockData
     const profileListJSON = astroJSON.people.map(async (astro) => {
       const wikiJSON = await this._getJSON(this.wikiUrl + astro.name);
       const astroDescription = wikiJSON.extract;
