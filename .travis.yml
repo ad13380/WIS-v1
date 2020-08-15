@@ -6,9 +6,8 @@ cache: npm
 install:
   - npm install
 
-# script:
-#   - npm test
-#   - npm run build
+script:
+  - npm test
 
 deploy:
   provider: heroku
