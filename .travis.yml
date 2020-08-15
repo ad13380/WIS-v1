@@ -1,7 +1,6 @@
 langauge: node_js
 node_js:
   - 14.4.0
-cache: npm
 
 install:
   - npm install
@@ -9,7 +8,7 @@ install:
 script:
   - npm test
 
-deploy:
-  provider: heroku
-  skip-clearnup: true
-  github-token: $GITHUB_TOKEN
+# deploy:
+#   provider: heroku
+#   skip-clearnup: true
+#   github-token: $GITHUB_TOKEN
