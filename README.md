@@ -1,7 +1,10 @@
 [![Build Status](https://travis-ci.org/ad13380/WIS-v1.svg?branch=master)](https://travis-ci.org/ad13380/WIS-v1)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ab64036b8392cbd0d959/maintainability)](https://codeclimate.com/github/ad13380/WIS-v1/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ab64036b8392cbd0d959/test_coverage)](https://codeclimate.com/github/ad13380/WIS-v1/test_coverage)
 
-Kept hitting a cors policy error for the HMPISRN API
+- Heroku proxy server deoplyed
+- Travis and CodeClimate set up
+- App deployed to heroku
 
-Tried using a cors-anywhere proxy server, then I hit a rate limit on that (not sure how)
-
-Will try hosting my own one on heroku - proxy server deployed on heroku, makes the app a bit slow, but nothing can be done about it
+- Core code functionality is there, working primarily on the front end now
+- Code coverage is low, still needs to be improved
