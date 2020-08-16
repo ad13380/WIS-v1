@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ad13380/WIS-v1.svg?branch=master)](https://travis-ci.org/ad13380/WIS-v1)
+
 Kept hitting a cors policy error for the HMPISRN API
 
 Tried using a cors-anywhere proxy server, then I hit a rate limit on that (not sure how)
