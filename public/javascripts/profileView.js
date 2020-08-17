@@ -23,5 +23,6 @@ class ProfileView {
       </div>
     `;
   }
-
 }
+
+module.exports = ProfileView;

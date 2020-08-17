@@ -17,6 +17,10 @@ class Profile {
   }
 
   get description() {
+    if (!this.profileJSON.astroDescription) {
+      // add placeholder description
+      return;
+    }
     return this.profileJSON.astroDescription;
   }
 
@@ -39,8 +43,7 @@ class Profile {
   get daysInSpace() {
     const parts = this.profileJSON.launchdate.split('-');
     const launchDate = new Date(parseInt(parts[0]), parseInt(parts[1] - 1), parseInt(parts[2]));
-    console.log(new Date() - launchDate)
-    return Math.floor((new Date() - launchDate) / (1000 * 60 * 60 * 24));
+    return Math.floor((new Date(Date.now()) - launchDate) / (1000 * 60 * 60 * 24));
   }
 }
 

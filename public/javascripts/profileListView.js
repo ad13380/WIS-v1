@@ -24,3 +24,5 @@ class ProfileListView {
     }, '');
   }
 }
+
+module.exports = ProfileListView;

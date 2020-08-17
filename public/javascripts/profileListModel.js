@@ -5,7 +5,7 @@ class ProfileList {
     this.profileId = 0;
   }
 
-  async populate(profileListJSON) {
+  populate(profileListJSON) {
     profileListJSON.forEach(profileJSON => {
       const profile = new this.profileClass(profileJSON, this.profileId);
       this._profileArray.push(profile);
@@ -17,3 +17,5 @@ class ProfileList {
     return this._profileArray;
   }
 }
+
+module.exports = ProfileList;

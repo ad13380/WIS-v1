@@ -3,6 +3,11 @@ a, a:hover {
   color: inherit;
 }
 
+.modal {
+  position: absolute;
+  top: 150px;
+}
+
 .card {
   border-radius: 15px; 
   border: none; 
