@@ -3,8 +3,8 @@ const Profile = require('../public/javascripts/profileModel.js');
 jest.mock('../public/javascripts/profileModel.js');
 
 describe("ProfileList", () => {
-  var profileList
-  var profileListJSON = [...Array(5).keys()].map( index => {
+  let profileList
+  let profileListJSON = [...Array(5).keys()].map( index => {
     return {
       "name" : `astronaut name ${index}`,
       "biophoto" : `portrait photo ${index}`,

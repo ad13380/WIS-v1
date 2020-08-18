@@ -2,7 +2,7 @@ const Profile = require('../public/javascripts/profileModel.js');
 
 describe("Profile", () => {
   let profile
-  let profileJSON =      {
+  let profileJSON = {
     "name" : "astronaut name",
     "biophoto" : "portrait photo",
     "biophotowidth" : 100,
@@ -17,7 +17,7 @@ describe("Profile", () => {
   }
 
   beforeEach(() => {
-    profile = new Profile(profileJSON)
+    profile = new Profile(profileJSON);
   });
 
   it("should have a default id of null", () => {
