@@ -43,6 +43,6 @@ describe("ProfileView", ()  => {
         </div>
       </div>
     `
-    expect(profileView.getHtml()).toEqual(expectedResult)
+    expect(profileView.getHtml()).toEqual(expectedResult);
   })
 })
