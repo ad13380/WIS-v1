@@ -5,13 +5,11 @@
 
 *This project is still a work in progress, more features are being added*
 
-As a long time space enthusiast, I've been engrossed in the recent [SpaceX Demo Crew launches](https://www.spacex.com/updates/crew-demo-2-mission-update-5-30-2020/). After curiously browsing
+As a long time space enthusiast, I've been engrossed in the recent [SpaceX Demo Crew launches](https://www.spacex.com/updates/crew-demo-2-mission-update-5-30-2020/). After curiously browsing the web to find out more about the astronauts currently in space, I found a lot of online resources were either sparse of information or involved clicking through lots of different sites (half of them being in Russian). There didn't seem to be a concise single page summary, so I thought I'd try to make one.
 
+The purpose of this project is to create a simple one page application that uses several APIs to pull data about every astronaut currently in space, and to then present that data in a way that is clean and is easy to read. 
 
-I found a lot of the online resources were either sparse of information or involved clicking through lots of different sites (half of them being in Russian). There didn't seem to be a concise single page summary, so I thought I'd try to make one.
-
-The purpose of this project is to create a simple one page application that uses APIs to pull data about 
-and present it in a way that looks clean and is easy to read.
+This app is written in JavaScript(ES6), HTML5 and CSS3 within an Express web framework. It uses a [Jest](https://jestjs.io/) testing framework, [Code Climate](https://codeclimate.com/) for code review and test coverage, and [Travis CI](https://travis-ci.org/)'s continuous integration service.
 
 ## Visit the Site
 This app is deployed on Heroku, you can visit it [here](https://whosinspace.herokuapp.com/)
@@ -38,7 +36,7 @@ Provides an up to date list of:
 ### Roadmap
 - Displaying their social  media feed (if they have one)
 - Displaying a news feed of articles that mention them
-- Displaying the current spacecraft they are on
+- Displaying the current spacecraft they are in
 - Displaying their launch date and total number of days in space
 - Better animations for site loading and cards appearing
 - Placeholder images and descriptions in case data is not available for a given astronaut
