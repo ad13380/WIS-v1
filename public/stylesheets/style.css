@@ -40,6 +40,10 @@ a, a:hover {
   box-shadow: 3px 3px 8px #292930;
 }
 
+.text-shadow {
+  text-shadow: 1px 1px 30px #292930;
+}
+
 .break {
   flex-basis: 100%;
   height: 0;
