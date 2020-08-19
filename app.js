@@ -12,6 +12,11 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
+app.use('/test', (req, res) => {
+  res.render('test')
+})
+
 app.use(function(req, res, next) {
   next(createError(404));
 });
