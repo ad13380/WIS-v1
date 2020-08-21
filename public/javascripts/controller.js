@@ -1,10 +1,11 @@
 class Controller {
-  constructor(profileClass = Profile, profileViewClass = ProfileView, profileListClass = ProfileList, profileListViewClass = ProfileListView) {
+  constructor(profileClass = Profile, profileViewClass = ProfileView, profileListClass = ProfileList, profileListViewClass = ProfileListView, loading = new Loading()) {
     this.corsProxyUrl = 'https://wis-proxy.herokuapp.com/'
     this.wikiUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
     this.profileList = new profileListClass(profileClass);
     this.profileViewClass  = profileViewClass;
     this.profileListViewClass = profileListViewClass;
+    this.loading = loading
   }
   
   async returnListHtml() {
@@ -17,6 +18,10 @@ class Controller {
     const profile = this._getProfileById(id)
     const profileView = new this.profileViewClass(profile)
     return profileView.getHtml();
+  }
+
+  returnLoadingHtml() {
+    return this.loading.getHtml();
   }
 
   get profileIds() {

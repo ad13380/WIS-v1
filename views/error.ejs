@@ -6,7 +6,6 @@
   <title>Who's in Space?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <style>
     body { 
       background: url("/images/error.gif") no-repeat center center fixed; 
@@ -32,7 +31,7 @@
     <div class="container centre-div">
       <div class="text-shadow div-center text-center">
         <p class="text-white display-4"><small>I'm afraid I can't let you do that...</small></p>
-        <p class="text-white h4"><small><%= error.status %>: It seems the page you are looking for doesn't exist</small></p>
+        <p class="text-white h4"><%= error.status %>: It seems the page you are looking for doesn't exist</p>
       </div>
     </div>
   </main>

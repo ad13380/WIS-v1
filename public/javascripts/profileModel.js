@@ -40,6 +40,18 @@ class Profile {
     return this.profileJSON.biophoto;    
   }
 
+  get launchDate() {
+    return this.profileJSON.launchdate;
+  }
+
+  get careerDays() {
+    return this.profileJSON.careerdays;
+  }
+
+  get readMoreLink() {
+    return this.profileJSON.biolink;
+  }
+
   get daysInSpace() {
     const parts = this.profileJSON.launchdate.split('-');
     const launchDate = new Date(parseInt(parts[0]), parseInt(parts[1] - 1), parseInt(parts[2]));
