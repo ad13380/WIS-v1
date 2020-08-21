@@ -7,7 +7,7 @@ class ProfileListView {
     return this.profileList.profileArray.reduce((acc, val) => {
       return acc += `
       <div class="col-sm-6 col-md-4 p-3">
-        <a href="#" class="card zoom background-colour" data-toggle="modal" data-target="#modal-profile-id-${val.id}">
+        <a href="#" class="card background-colour zoom" data-toggle="modal" data-target="#modal-profile-id-${val.id}">
           <img class="card-img-top mask1" src=${val.bioImage} alt="astronaut thumbnail">
           <div class="card-img-overlay">
             <img class="mb-auto shadow" style="height: 30px; width: auto; align-self: start" src=${val.flagImage}>

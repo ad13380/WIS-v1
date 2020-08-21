@@ -17,12 +17,22 @@
       width: 100%;
       height: 100vh;
       background-image: 
-        url(http://salo.agency/orion/img/home/header/dust-delante.png),
+        /* url(http://salo.agency/orion/img/home/header/dust-delante.png), */
         url(http://salo.agency/orion/img/home/header/dust-medio.png), 
         url(http://salo.agency/orion/img/home/header/bg-dust.png);
       background-repeat: no-repeat;
       background-position: center;
       background-position: 50% 50%;
+    }
+
+    @font-face {
+      font-family: "Staatliches";
+      src: url("fonts/Staatliches-Regular.tff");
+    }
+
+    .main-header {
+      font-family: "Staatliches";
+      font-size: 80px;
     }
   </style>
 </head>
@@ -36,7 +46,7 @@
       <!-- Welcome Heading -->
       <div class="row">
         <div class="col-lg text-center">
-          <h1 class="display-4 text-white">WHO'S IN SPACE?</h1>
+          <h1 class="main-header text-white">WHO'S IN SPACE?</h1>
         </div>
       </div>
 
