@@ -38,7 +38,7 @@ class Controller {
   }
 
   async _getPeopleInSpace() {
-    const astroJSON = mockData;//await this._getJSON(this.corsProxyUrl); // 
+    const astroJSON = await this._getJSON(this.corsProxyUrl);
     const profileListJSON = astroJSON.people.map(async (astro) => {
       const wikiJSON = await this._getJSON(this.wikiUrl + astro.name);
       const astroDescription = wikiJSON.extract;

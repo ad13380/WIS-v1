@@ -29,7 +29,6 @@ describe("ProfileListView", () =>  {
     profileListView = new ProfileListView(profileList)
   });
 
-  // this will need to be updated as features are added
   it("should return the correct card list html for every profile", () => {
     let expectedResult = [...Array(3).keys()].reduce((acc, val) => {
       return acc + `
@@ -49,7 +48,7 @@ describe("ProfileListView", () =>  {
       </div>
       `
     }, "")
-    
+
     expect(profileListView.getHtml()).toEqual(expectedResult);
   });
 })
