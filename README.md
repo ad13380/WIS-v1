@@ -16,7 +16,7 @@ This app is deployed on Heroku, you can visit it [here](https://whosinspace.hero
 
 ## Screen Previews
 ### Site Overview
-<img src="./public/images/overview.gif"/>
+<img src="./public/images/overview2.gif"/>
 
 ### Loading Animation
 <img src="./public/images/loading.gif"/>
