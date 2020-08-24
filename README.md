@@ -3,7 +3,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ab64036b8392cbd0d959/maintainability)](https://codeclimate.com/github/ad13380/WIS-v1/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ab64036b8392cbd0d959/test_coverage)](https://codeclimate.com/github/ad13380/WIS-v1/test_coverage)
 
-*This project is still a work in progress, more features are being added*
+<div align="center">
+
+[Visit the Site](#visit-the-site) | [Screen Preview](#screen-previews) | [Features](#features) | [Challenges and Known Issues](#challenges-and-known-issues) 
+
+</div>
 
 As a long time space enthusiast, I've been engrossed in the recent [SpaceX Demo Crew launches](https://www.spacex.com/updates/crew-demo-2-mission-update-5-30-2020/). After curiously browsing the web to find out more about the astronauts currently in space, I found a lot of online resources were either sparse of information or involved clicking through lots of different sites (half of them being in Russian). There didn't seem to be a concise single page summary, so I thought I'd try to make one.
 
