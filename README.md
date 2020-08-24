@@ -18,29 +18,35 @@ This app is deployed on Heroku, you can visit it [here](https://whosinspace.hero
 ### Site Overview
 <img src="./public/images/overview.gif"/>
 
-### Responsive Layout
-<img src="./public/images/responsive.gif"/>
+### Loading Animation
+<img src="./public/images/loading.gif"/>
+
+### 404 Error Page
+<img src="./public/images/error.gif"/>
+
+### Placeholder for Missing Data
+<img src="./public/images/missing.gif"/>
 
 ### Viewing on a Mobile Device
 <img src="./public/images/mobile.gif" height="400"/>
 
 ## Features
 ### Implemented
-Provides an up to date list of:
-- The name of all astronauts in space
-- Their title (rank or position)
-- Their photo
-- Their nationality (as a flag thumbnail)
-- A brief description about them (displayed after clicking on their card)
-
-### Roadmap
-- Displaying their social  media feed (if they have one)
-- Displaying a news feed of articles that mention them
-- Displaying the current spacecraft they are in
-- Displaying their launch date and total number of days in space
-- Better animations for site loading and cards appearing
+- Provides an up to date list of:
+  - The name of all astronauts in space
+  - Their title (rank or position)
+  - Their photo
+  - Their nationality (as a flag thumbnail)
+  - A brief description about them (displayed after clicking on their card)
+  - The current spacecraft their in
+  - Number of days in space for their current assignment
+  - Number of career days
+  - A link to a "Read More" page
 - Placeholder images and descriptions in case data is not available for a given astronaut
-- A presentable 404 page
+- Responsive layout for different screen sizes and mobile devices
+- Responsive parallax background that responds to cursor movements
+- Loading animation while API data is being fetched
+- 404 page for incorrect routes
 
 ## Challenges and Known Issues
 - CORS error
