@@ -11,9 +11,11 @@ describe("ProfileListView", () =>  {
   beforeEach(() => {
     profileArrayMockProfiles = [...Array(3).keys()].map( index => {
       return {
+        id  : index,
         name : `astronaut name ${index}`,
         title : `astronaut title ${index}`,
-        biophoto : `portrait photo ${index}`
+        bioImage : `portrait photo url ${index}`,
+        flagImage : `flag image url ${index}`,
       }
     });
 
@@ -31,10 +33,10 @@ describe("ProfileListView", () =>  {
   it("should return the correct card list html for every profile", () => {
     let expectedResult = `
       <div class="col-sm-6 col-md-4 p-3">
-        <a href="#" class="card background-colour zoom" data-toggle="modal" data-target="#modal-profile-id-undefined">
-          <img class="card-img-top mask1" src=undefined alt="astronaut thumbnail">
+        <a href="#" class="card background-colour zoom" data-toggle="modal" data-target="#modal-profile-id-0">
+          <img class="card-img-top mask1" src=portrait photo url 0 alt="astronaut thumbnail">
           <div class="card-img-overlay">
-            <img class="mb-auto shadow" style="height: 30px; width: auto; align-self: start" src=undefined>
+            <img class="mb-auto shadow" style="height: 30px; width: auto; align-self: start" src=flag image url 0>
           </div>
           <div class="card-body card-img-overlay d-flex flex-wrap align-content-end">
             <div class="break"></div>
@@ -46,10 +48,10 @@ describe("ProfileListView", () =>  {
       </div>
       
       <div class="col-sm-6 col-md-4 p-3">
-        <a href="#" class="card background-colour zoom" data-toggle="modal" data-target="#modal-profile-id-undefined">
-          <img class="card-img-top mask1" src=undefined alt="astronaut thumbnail">
+        <a href="#" class="card background-colour zoom" data-toggle="modal" data-target="#modal-profile-id-1">
+          <img class="card-img-top mask1" src=portrait photo url 1 alt="astronaut thumbnail">
           <div class="card-img-overlay">
-            <img class="mb-auto shadow" style="height: 30px; width: auto; align-self: start" src=undefined>
+            <img class="mb-auto shadow" style="height: 30px; width: auto; align-self: start" src=flag image url 1>
           </div>
           <div class="card-body card-img-overlay d-flex flex-wrap align-content-end">
             <div class="break"></div>
@@ -61,10 +63,10 @@ describe("ProfileListView", () =>  {
       </div>
       
       <div class="col-sm-6 col-md-4 p-3">
-        <a href="#" class="card background-colour zoom" data-toggle="modal" data-target="#modal-profile-id-undefined">
-          <img class="card-img-top mask1" src=undefined alt="astronaut thumbnail">
+        <a href="#" class="card background-colour zoom" data-toggle="modal" data-target="#modal-profile-id-2">
+          <img class="card-img-top mask1" src=portrait photo url 2 alt="astronaut thumbnail">
           <div class="card-img-overlay">
-            <img class="mb-auto shadow" style="height: 30px; width: auto; align-self: start" src=undefined>
+            <img class="mb-auto shadow" style="height: 30px; width: auto; align-self: start" src=flag image url 2>
           </div>
           <div class="card-body card-img-overlay d-flex flex-wrap align-content-end">
             <div class="break"></div>

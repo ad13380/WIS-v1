@@ -8,8 +8,6 @@ describe("ProfileList", () => {
     return {
       "name" : `astronaut name ${index}`,
       "biophoto" : `portrait photo ${index}`,
-      "biophotowidth" : 100,
-      "biophotoheight" : 100,
       "countryflag" : `flag url ${index}`,
       "launchdate" : `2020-04-${index}`,
       "title" : `astronaut title ${index}`,

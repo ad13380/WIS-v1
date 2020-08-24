@@ -18,8 +18,7 @@ class Profile {
 
   get description() {
     if (!this.profileJSON.astroDescription) {
-      // add placeholder description
-      return;
+      return `${this.profileJSON.name} launched on ${this.profileJSON.launchdate} and has been aboard the ${this.profileJSON.location} for ${this.daysInSpace} day(s)`
     }
     return this.profileJSON.astroDescription;
   }
@@ -34,8 +33,7 @@ class Profile {
 
   get bioImage() {
     if (!this.profileJSON.biophoto) {
-      // add placeholder image
-      return;
+      return '/images/bio-placeholder.png';
     }
     return this.profileJSON.biophoto;    
   }

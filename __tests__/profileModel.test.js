@@ -5,13 +5,12 @@ describe("Profile", () => {
   let profileJSON = {
     "name" : "astronaut name",
     "biophoto" : "portrait photo",
-    "biophotowidth" : 100,
-    "biophotoheight" : 100,
     "countryflag" : "flag url",
     "launchdate" : "2020-04-09",
+    "careerdays" : 100,
     "title" : "astronaut title",
     "location" : "spacecraft",
-    "biolink" : "bio url",
+    "biolink" : "read more url",
     "twitter" : "twitter url",
     "astroDescription"  : "a description of the astronaut"
   }
@@ -24,6 +23,14 @@ describe("Profile", () => {
     expect(profile.id).toEqual(null)
   });
 
+  it("should return the astronaut's number of career days", () => {
+    expect(profile.careerDays).toEqual(100)
+  });
+
+  it("should return the astronaut's laumch date", () => {
+    expect(profile.launchDate).toEqual("2020-04-09")
+  });
+
   it("should calulcate days in space", () => {
     const spy = jest
       .spyOn(global.Date, 'now')
@@ -32,11 +39,11 @@ describe("Profile", () => {
     spy.mockRestore()
   });
 
-  it("should return the astronauts name", () => {
+  it("should return the astronaut's name", () => {
     expect(profile.name).toEqual('astronaut name')
   });
 
-  it("should return the astronauts title", () => {
+  it("should return the astronaut's title", () => {
     expect(profile.title).toEqual('astronaut title')
   });
 
@@ -56,13 +63,23 @@ describe("Profile", () => {
     expect(profile.bioImage).toEqual('portrait photo')
   });
 
-  describe("if data fields are missing", () => {
-    xit("should return a placeholder photo", () => {
-      // feature not yet implemented
-    })
+  it("should return the astronaut's read more url", () => {
+    expect(profile.readMoreLink).toEqual('read more url')
+  });
 
-    xit("should return a placeholder descripion", () => {
-      // feature not yet implemented
-    })
+  describe("if data fields are missing", () => {
+    beforeEach(() => {
+      profileJSON.astroDescription = ""
+      profileJSON.biophoto = ""
+      profile = new Profile(profileJSON);
+    });
+
+    it("should return a placeholder portrait photo", () => {
+      expect(profile.bioImage).toEqual('/images/bio-placeholder.png')
+    });
+
+    it("should return a placeholder description", () => {
+      expect(profile.description).toEqual('astronaut name launched on 2020-04-09 and has been aboard the spacecraft for 137 day(s)')
+    });
   })
 });

@@ -31,9 +31,9 @@ class ProfileView {
                       <div class="row"> <span class="font-weight-bold"> Spacecraft </span> </div>
                       <div class="row"> <span class="font-italic"> ${this.profile.craft} </span> </div>
                       <div class="row"> <span class="font-weight-bold"> Days in Space </span> </div>
-                      <div class="row"> 
-                        <span class="font-italic mr-1"> ${this.profile.daysInSpace} </span> 
-                        <span class="font-weight-light"> (launched on ${this.profile.launchDate}) </span> 
+                      <div class="row">
+                        <span class="font-italic mr-1"> ${this.profile.daysInSpace} </span>
+                        <span class="font-weight-light"> (launched on ${this.profile.launchDate}) </span>
                       </div>
                       <div class="row"> <span class="font-weight-bold"> Career Days </span> </div>
                       <div class="row"> <span class="font-italic"> ${this.profile.careerDays} </span> </div>
