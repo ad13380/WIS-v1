@@ -1,41 +1,53 @@
 # Who's in Space?
+
 [![Build Status](https://travis-ci.org/ad13380/WIS-v1.svg?branch=master)](https://travis-ci.org/ad13380/WIS-v1)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ab64036b8392cbd0d959/maintainability)](https://codeclimate.com/github/ad13380/WIS-v1/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ab64036b8392cbd0d959/test_coverage)](https://codeclimate.com/github/ad13380/WIS-v1/test_coverage)
 
+<h2>A recent change to the "People in Space Right Now API" has caused several sites (inlcuding mine) to break, will look at fixing this bug in the near future </h2>
+
 <div align="center">
 
-[Visit the Site](#visit-the-site) | [Screen Preview](#screen-previews) | [Features](#features) | [Challenges and Known Issues](#challenges-and-known-issues) 
+[Visit the Site](#visit-the-site) | [Screen Preview](#screen-previews) | [Features](#features) | [Challenges and Known Issues](#challenges-and-known-issues)
 
 </div>
 
 As a long time space enthusiast, I've been engrossed in the recent [SpaceX Demo Crew launches](https://www.spacex.com/updates/crew-demo-2-mission-update-5-30-2020/). After curiously browsing the web to find out more about the astronauts currently in space, I found a lot of online resources were either sparse of information or involved clicking through lots of different sites (half of them being in Russian). There didn't seem to be a concise single page summary, so I thought I'd try to make one.
 
-The purpose of this project is to create a simple one page application that uses several APIs to pull data about every astronaut currently in space, and to then present that data in a way that is clean and is easy to read. 
+The purpose of this project is to create a simple one page application that uses several APIs to pull data about every astronaut currently in space, and to then present that data in a way that is clean and is easy to read.
 
 This app is written in JavaScript(ES6), HTML5 and CSS3 within an Express web framework. It uses a [Jest](https://jestjs.io/) testing framework, [Code Climate](https://codeclimate.com/) for code review and test coverage, and [Travis CI](https://travis-ci.org/)'s continuous integration service.
 
 ## Visit the Site
+
 This app is deployed on Heroku, you can visit it [here](https://whosinspace.herokuapp.com/)
 
 ## Screen Previews
+
 ### Site Overview
+
 <img src="./public/images/overview2.gif"/>
 
 ### Loading Animation
+
 <img src="./public/images/loading.gif"/>
 
 ### 404 Error Page
+
 <img src="./public/images/error.gif"/>
 
 ### Placeholder for Missing Data
+
 <img src="./public/images/missing.gif"/>
 
 ### Viewing on a Mobile Device
+
 <img src="./public/images/mobile.gif" height="400"/>
 
 ## Features
+
 ### Implemented
+
 - Provides an up to date list of:
   - The name of all astronauts in space
   - Their title (rank or position)
@@ -53,8 +65,9 @@ This app is deployed on Heroku, you can visit it [here](https://whosinspace.hero
 - 404 page for incorrect routes
 
 ## Challenges and Known Issues
+
 - CORS error
-  - I was initially unable to use the [How Many People are In Space API](https://www.howmanypeopleareinspacerightnow.com/peopleinspace.json) as every GET request resulted in a CORS error. After a lot of research I reasoned the easiest way to overcome the issue was to use a proxy server that would take the API data and add a ```Access-Control-Allow-Origin: *``` header to the response
+  - I was initially unable to use the [How Many People are In Space API](https://www.howmanypeopleareinspacerightnow.com/peopleinspace.json) as every GET request resulted in a CORS error. After a lot of research I reasoned the easiest way to overcome the issue was to use a proxy server that would take the API data and add a `Access-Control-Allow-Origin: *` header to the response
   - I implemented an [open source proxy server](https://github.com/Rob--W/cors-anywhere) that seemed to solve the issue, but was quickly blocked by an API rate limit error
   - I then decided to deploy my own [dedicated proxy server](https://github.com/ad13380/cors-proxy-server). This seems to have solved the problem
 - Slow load time
